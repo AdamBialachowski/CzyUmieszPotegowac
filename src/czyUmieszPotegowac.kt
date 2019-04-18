@@ -7,15 +7,14 @@ class canUMagnify(){
 
     fun howMutchExamples(){
         var D = readLine().toString().toInt() //pobiera ile ma być parametró podanych
+        var abStr:String
         var a = 1
         var b = 1
         var w = IntArray(D)      //tworzy tablice
         for (i:Int in 0..D-1){
-            a = readLine().toString().toInt()
-            b = readLine().toString().toInt()
+            abStr = readLine().toString()
 
-
-            w[i] = giveLastNumber(a, b)
+            w[i] = giveLastNumber(abStr.split(" ")[0].toInt(), abStr.split(" ")[1].toInt())
         }
         for (i:Int in 0..D-1){
             println(w[i])
@@ -33,8 +32,8 @@ class canUMagnify(){
 
 
 fun main(args:Array<String>){
-    var givePowLastNumber = canUMagnify()
 
+    var givePowLastNumber = canUMagnify()
     givePowLastNumber.howMutchExamples()
 
 }
